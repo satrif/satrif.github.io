@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+      	<meta charset="utf-8">
+      	<meta name="viewpoint" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      	<title>Arpegios</title>
+    </head>
+    <body class="text-center px-1">
+        <header class="mb-4 border-bottom">
+            <p>Arpegios</p>
+        </header>
+        <div class="justify-content-center d-flex">
+            <div style="width: 30vw;">
+                <div class="container-sm">
+                    <div class="row">
+                        <div class="col-4 bg-primary text-white border-end">
+                            <div>
+                                <p class="text-end">KEY &rarr;</p>
+                                <p class="text-start">Chords &darr;</p>
+                            </div>
+                        </div>
+                        <div class="col text-start bg-primary text-white">
+                            <select class="" id="noteKey">
+                                <option value="0" selected>C</option>
+                                <option value="1">C#</option>
+                                <option value="2">D</option>
+                                <option value="3">D#</option>
+                                <option value="4">E</option>
+                                <option value="5">F</option>
+                                <option value="6">F#</option>
+                                <option value="7">G</option>
+                                <option value="8">G#</option>
+                                <option value="9">A</option>
+                                <option value="10">A#</option>
+                                <option value="11">B</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 bg-secondary border-end text-white">
+                            <p>Major</p>
+                        </div>
+                        <div class="col bg-secondary text-white">
+                            <div class="d-flex" id="major"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 bg-warning border-end">
+                            <p>Minor</p>
+                        </div>
+                        <div class="col bg-warning">
+                            <div class="d-flex" id="minor"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 bg-warning border-end">
+                            <p>sus2</p>
+                        </div>
+                        <div class="col bg-warning">
+                            <div class="d-flex" id="sus2"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 bg-warning border-end">
+                            <p>sus4</p>
+                        </div>
+                        <div class="col bg-warning">
+                            <div class="d-flex" id="sus4"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 bg-warning border-end">
+                            <p>maj7</p>
+                        </div>
+                        <div class="col bg-warning">
+                            <div class="d-flex" id="maj7"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 bg-warning border-end">
+                            <p>7</p>
+                        </div>
+                        <div class="col bg-warning">
+                            <div class="d-flex" id="ma7"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 bg-warning border-end">
+                            <p>min7</p>
+                        </div>
+                        <div class="col bg-warning">
+                            <div class="d-flex" id="min7"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 bg-warning border-end">
+                            <p>dim7</p>
+                        </div>
+                        <div class="col bg-warning">
+                            <div class="d-flex" id="dim7"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 bg-warning border-end">
+                            <p>add9</p>
+                        </div>
+                        <div class="col bg-warning">
+                            <div class="d-flex" id="add9"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 bg-warning border-end">
+                            <p>add13</p>
+                        </div>
+                        <div class="col bg-warning">
+                            <div class="d-flex" id="add13"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 bg-warning border-end">
+                            <p>6 (major)</p>
+                        </div>
+                        <div class="col bg-warning">
+                            <div class="d-flex" id="maj6"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 bg-warning border-end">
+                            <p>9 (major)</p>
+                        </div>
+                        <div class="col bg-warning">
+                            <div class="d-flex" id="maj9"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 bg-warning border-end">
+                            <p>9 (nonaccord)</p>
+                        </div>
+                        <div class="col bg-warning">
+                            <div class="d-flex" id="nona9"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 bg-warning border-end">
+                            <p>11 (udencimaccord)</p>
+                        </div>
+                        <div class="col bg-warning">
+                            <div class="d-flex" id="udenc11"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 bg-warning border-end">
+                            <p>13 (terzdecimaccord)</p>
+                        </div>
+                        <div class="col bg-warning">
+                            <div class="d-flex" id="terzdec13"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script type="text/javascript">
+            let key = document.getElementById('noteKey');
+            let notesArray = [
+                // [key name] //[array num] - [chromatic scale num]
+                'C',          //0           - 1
+                'C#',         //1           - 2
+                'D',          //2           - 3
+                'D#',         //3           - 4
+                'E',          //4           - 5
+                'F',          //5           - 6
+                'F#',         //6           - 7
+                'G',          //7           - 8
+                'G#',         //8           - 9
+                'A',          //9           - 10
+                'A#',         //10          - 11
+                'B'           //11          - 12
+            ];
+            function makeChords(keyNum) {
+                //re-make arrays
+                let newNoteArr = notesArray;
+                if(keyNum > 0) {
+                    let secondPart = notesArray.slice(0, keyNum);
+                    let firstPart = notesArray.slice(keyNum, notesArray.length+1);
+                    newNoteArr = [...firstPart, ...secondPart];
+                }
+                //  *************************
+                //  MAJOR SECTION START
+                let majorContainer = document.getElementById('major');
+                // major = 1, 5, 8
+                majorContainer.innerHTML = "<p style='margin-right: 2.5em;'><b>" + newNoteArr[0] + "</b></p>";
+                majorContainer.innerHTML += "<p style='margin-right: 2.5em;'><b>" + newNoteArr[4] + "</b></p>";
+                majorContainer.innerHTML += "<p><b>" + newNoteArr[7] + "</b></p>";
+                //  MAJOR SECTION END
+                //  *************************
+                //  *************************
+                //  minor SECTION START
+                let minorContainer = document.getElementById('minor');
+                // minor = 1, 4, 8
+                minorContainer.innerHTML = "<p style='margin-right: 2.5em;'><b>" + newNoteArr[0] + "</b></p>";
+                minorContainer.innerHTML += "<p style='margin-right: 2.5em;'><b>" + newNoteArr[3] + "</b></p>";
+                minorContainer.innerHTML += "<p><b>" + newNoteArr[7] + "</b></p>";
+                //  minor SECTION END
+                //  *************************
+                //sus2 sus4 maj7 ma7 min7 dim7 add9 add13 maj6 maj9 nona9 udenc11 terzdec13
+                //  *************************
+                //  sus2 SECTION START
+                let sus2Container = document.getElementById('sus2');
+                // sus2 = 1, 2, 5
+                sus2Container.innerHTML = "<p style='margin-right: 2.5em;'><b>" + newNoteArr[0] + "</b></p>";
+                sus2Container.innerHTML += "<p style='margin-right: 2.5em;'><b>" + newNoteArr[1] + "</b></p>";
+                sus2Container.innerHTML += "<p><b>" + newNoteArr[4] + "</b></p>";
+                //  sus2 SECTION END
+                //  *************************
+                //  *************************
+                //  sus4 SECTION START
+                let sus4Container = document.getElementById('sus4');
+                // sus4 = 1, 4, 5
+                sus4Container.innerHTML = "<p style='margin-right: 2.5em;'><b>" + newNoteArr[0] + "</b></p>";
+                sus4Container.innerHTML += "<p style='margin-right: 2.5em;'><b>" + newNoteArr[3] + "</b></p>";
+                sus4Container.innerHTML += "<p><b>" + newNoteArr[4] + "</b></p>";
+                //  sus4 SECTION END
+                //  *************************
+                //  *************************
+                //  maj7 SECTION START
+                let maj7Container = document.getElementById('maj7');
+                // maj7 = 1, 3, 5, 7
+                maj7Container.innerHTML = "<p style='margin-right: 2.5em;'><b>" + newNoteArr[0] + "</b></p>";
+                maj7Container.innerHTML += "<p style='margin-right: 2.5em;'><b>" + newNoteArr[2] + "</b></p>";
+                maj7Container.innerHTML += "<p style='margin-right: 2.5em;'><b>" + newNoteArr[4] + "</b></p>";
+                maj7Container.innerHTML += "<p><b>" + newNoteArr[6] + "</b></p>";
+                //  maj7 SECTION END
+                //  *************************
+                //  *************************
+                //  ma7 SECTION START
+                let ma7Container = document.getElementById('ma7');
+                // ma7 = 1, 4, 8
+                ma7Container.innerHTML = "<p style='margin-right: 2.5em;'><b>" + newNoteArr[0] + "</b></p>";
+                ma7Container.innerHTML += "<p style='margin-right: 2.5em;'><b>" + newNoteArr[3] + "</b></p>";
+                ma7Container.innerHTML += "<p><b>" + newNoteArr[7] + "</b></p>";
+                //  ma7 SECTION END
+                //  *************************
+                //  *************************
+                //  min7 SECTION START
+                let min7Container = document.getElementById('min7');
+                // min7 = 1, 4, 8
+                min7Container.innerHTML = "<p style='margin-right: 2.5em;'><b>" + newNoteArr[0] + "</b></p>";
+                min7Container.innerHTML += "<p style='margin-right: 2.5em;'><b>" + newNoteArr[3] + "</b></p>";
+                min7Container.innerHTML += "<p><b>" + newNoteArr[7] + "</b></p>";
+                //  min7 SECTION END
+                //  *************************
+                //  *************************
+                //  dim7 SECTION START
+                let dim7Container = document.getElementById('dim7');
+                // dim7 = 1, 4, 8
+                dim7Container.innerHTML = "<p style='margin-right: 2.5em;'><b>" + newNoteArr[0] + "</b></p>";
+                dim7Container.innerHTML += "<p style='margin-right: 2.5em;'><b>" + newNoteArr[3] + "</b></p>";
+                dim7Container.innerHTML += "<p><b>" + newNoteArr[7] + "</b></p>";
+                //  dim7 SECTION END
+                //  *************************
+                //  *************************
+                //  add9 SECTION START
+                let add9Container = document.getElementById('add9');
+                // add9 = 1, 4, 8
+                add9Container.innerHTML = "<p style='margin-right: 2.5em;'><b>" + newNoteArr[0] + "</b></p>";
+                add9Container.innerHTML += "<p style='margin-right: 2.5em;'><b>" + newNoteArr[3] + "</b></p>";
+                add9Container.innerHTML += "<p><b>" + newNoteArr[7] + "</b></p>";
+                //  add9 SECTION END
+                //  *************************
+                //  *************************
+                //  add13 SECTION START
+                let add13Container = document.getElementById('add13');
+                // major = 1, 4, 8
+                add13Container.innerHTML = "<p style='margin-right: 2.5em;'><b>" + newNoteArr[0] + "</b></p>";
+                add13Container.innerHTML += "<p style='margin-right: 2.5em;'><b>" + newNoteArr[3] + "</b></p>";
+                add13Container.innerHTML += "<p><b>" + newNoteArr[7] + "</b></p>";
+                //  add13 SECTION END
+                //  *************************
+                //  *************************
+                //  maj6 SECTION START
+                let maj6Container = document.getElementById('maj6');
+                // maj6 = 1, 4, 8
+                maj6Container.innerHTML = "<p style='margin-right: 2.5em;'><b>" + newNoteArr[0] + "</b></p>";
+                maj6Container.innerHTML += "<p style='margin-right: 2.5em;'><b>" + newNoteArr[3] + "</b></p>";
+                maj6Container.innerHTML += "<p><b>" + newNoteArr[7] + "</b></p>";
+                //  maj6 SECTION END
+                //  *************************
+                //  *************************
+                //  maj9 SECTION START
+                let maj9Container = document.getElementById('maj9');
+                // maj9 = 1, 4, 8
+                maj9Container.innerHTML = "<p style='margin-right: 2.5em;'><b>" + newNoteArr[0] + "</b></p>";
+                maj9Container.innerHTML += "<p style='margin-right: 2.5em;'><b>" + newNoteArr[3] + "</b></p>";
+                maj9Container.innerHTML += "<p><b>" + newNoteArr[7] + "</b></p>";
+                //  maj9 SECTION END
+                //  *************************
+                //  *************************
+                //  nona9 SECTION START
+                let nona9Container = document.getElementById('nona9');
+                // nona9 = 1, 4, 8
+                nona9Container.innerHTML = "<p style='margin-right: 2.5em;'><b>" + newNoteArr[0] + "</b></p>";
+                nona9Container.innerHTML += "<p style='margin-right: 2.5em;'><b>" + newNoteArr[3] + "</b></p>";
+                nona9Container.innerHTML += "<p><b>" + newNoteArr[7] + "</b></p>";
+                //  nona9 SECTION END
+                //  *************************
+                //  *************************
+                //  udenc11 SECTION START
+                let udenc11Container = document.getElementById('udenc11');
+                // udenc11 = 1, 4, 8
+                udenc11Container.innerHTML = "<p style='margin-right: 2.5em;'><b>" + newNoteArr[0] + "</b></p>";
+                udenc11Container.innerHTML += "<p style='margin-right: 2.5em;'><b>" + newNoteArr[3] + "</b></p>";
+                udenc11Container.innerHTML += "<p><b>" + newNoteArr[7] + "</b></p>";
+                //  udenc11 SECTION END
+                //  *************************
+                //  *************************
+                //  terzdec13 SECTION START
+                let terzdec13Container = document.getElementById('terzdec13');
+                // terzdec13 = 1, 4, 8
+                terzdec13Container.innerHTML = "<p style='margin-right: 2.5em;'><b>" + newNoteArr[0] + "</b></p>";
+                terzdec13Container.innerHTML += "<p style='margin-right: 2.5em;'><b>" + newNoteArr[3] + "</b></p>";
+                terzdec13Container.innerHTML += "<p><b>" + newNoteArr[7] + "</b></p>";
+                //  terzdec13 SECTION END
+                //  *************************
+            }
+            window.addEventListener("load", function() {
+                makeChords();
+                console.log("key = ", key.value);
+            });
+            key.addEventListener('change', function() {
+                console.log("key changed = ", this.value);
+                makeChords(this.value);
+            });
+        </script>
+    </body>
+</html>
