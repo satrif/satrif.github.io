@@ -1737,6 +1737,16 @@
                 'A#',         //10          - 11
                 'B'           //11          - 12
             ];
+            let tuning = [
+                {
+                    name: 'standard',
+                    tune: [4,9,2,7,11,4]
+                },
+                {
+                    name: 'drop D',
+                    tune: [2,9,2,7,11,4]
+                }
+            ]
             // major minor sus2 sus4 maj7 ma7 min7 dim7 add9 add13 maj6 maj9 nona9 udenc11 terzdec13 
             let progressions = [
                 {
@@ -1836,9 +1846,9 @@
                     // console.log(stringsContainer);
                     let currStep;
                     element["progression"].forEach(progs => {
-                        console.log('keynum = ',keyNum,'prog = ',progs);
+                        //console.log('keynum = ',keyNum,'prog = ',progs);
                         currStep = ((parseInt(keyNum) + parseInt(progs)) > 11) ? ((parseInt(keyNum) + parseInt(progs))-12) : parseInt(keyNum) + parseInt(progs);
-                        console.log(currStep);
+                        //console.log(currStep);
                         chordContainer.innerHTML = ((iter == 0) ? "" : chordContainer.innerHTML) + "<p style='margin-right: 2.5em;'><b>" + newNoteArr[progs] + "</b></p>" ;
                         if(stringsContainer) {
                             stringsTarget = stringsContainer.querySelectorAll('div.step'+currStep);
