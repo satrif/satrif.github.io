@@ -31,7 +31,9 @@
                         <div class="col text-start bg-primary text-white">
                             <select class="form-select" id="tuningKey">
                                 <option value="0" selected>Standard</option>
-                                <option value="1">Drop D</option>
+                                <option value="1">Standard D</option>
+                                <option value="2">Drop D</option>
+                                <option value="3">D drop C</option>
                             </select>
                             <select class="form-select" id="noteKey">
                                 <option value="0" selected>C</option>
@@ -72,13 +74,22 @@
             ];
             let tuning = [
                 {
-                    name: 'standard',
+                    name: 'Standard',
                     tune: [4,11,7,2,9,4]//reversed
                     // tune: [4,9,2,7,11,4]
                 },
                 {
-                    name: 'drop D',
+                    name: 'Standard D',
+                    tune: [2,9,5,0,7,2]
+                },
+                {
+                    name: 'Drop D',
                     tune: [4,11,7,2,9,2]//reversed
+                    // tune: [2,9,2,7,11,4]
+                },
+                {
+                    name: 'D drop C',
+                    tune: [2,9,5,0,7,0]//reversed
                     // tune: [2,9,2,7,11,4]
                 }
             ]
